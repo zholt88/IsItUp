@@ -8,7 +8,7 @@
         Title="MainWindow" Height="305.22" Width="310.673">
     <Grid>
         <Button Content="Check!" HorizontalAlignment="Left" Margin="106,160,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="81,131,0,0" TextWrapping="Wrap" Text="Enter a URI" VerticalAlignment="Top" Width="120" Name="TextBox"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="81,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Name="TextBox"/>
         <TextBlock HorizontalAlignment="Left" Margin="120,102,0,0" TextWrapping="Wrap" Text="Is It Up?" VerticalAlignment="Top" Height="25" Width="44"/>
 
     </Grid>
