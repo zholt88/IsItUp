@@ -1,6 +1,7 @@
 ﻿using System.Threading;
+using IsItUpLogic;
 
-namespace IsItUp
+namespace IsItUpService
 {
     public class Service
     {
@@ -20,8 +21,8 @@ namespace IsItUp
 
         private void Run()
         {
-            var upChecker = new UpChecker();
-            while (!upChecker.IsItUp())
+            var upChecker = new NotifyingUpChecker();
+            while (!upChecker.IsItUp(System.Configuration.ConfigurationManager.AppSettings["UrlToCheck"]))
             {
                 Thread.Sleep(int.Parse(System.Configuration.ConfigurationManager.AppSettings["IntervalMilliseconds"]));
             }
