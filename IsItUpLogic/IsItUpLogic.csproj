@@ -41,6 +41,7 @@
     <Compile Include="IUpChecker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="NotifyingUpChecker.cs" />
+    <Compile Include="SimpleUpChecker.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Flurl">
