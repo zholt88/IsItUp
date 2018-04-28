@@ -31,7 +31,16 @@ namespace IsItUpApp
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
             bool isUp = await _upChecker.IsItUpAsync(TextBox.Text);
-            MessageBox.Show(isUp ? "It's up!" : "Nope :(");
+            if (isUp)
+            {
+                TextBlock1.Background = Brushes.Green;
+                TextBlock1.Text = "Yes!";
+            }
+            else
+            {
+                TextBlock1.Background = Brushes.Red;
+                TextBlock1.Text = "No :(";
+            }
         }
     }
 }
