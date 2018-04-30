@@ -1,32 +1,45 @@
 ﻿using System.Threading;
 using IsItUpLogic;
+using Quartz;
+using Quartz.Impl;
+using Quartz.Core;
+using Quartz.Listener;
+using Quartz.Simpl;
+using Quartz.Util;
+using Quartz.Xml;
+using System.Threading.Tasks;
 
 namespace IsItUpService
 {
     public class Service
     {
-        private Thread _serviceThread;
-
-        public void Start()
+        public async Task Start()
         {
-            _serviceThread = new Thread(Run);
-            _serviceThread.IsBackground = true;
-            _serviceThread.Start();
+            var scheduler = await new StdSchedulerFactory().GetScheduler();
+            await scheduler.Start();
+            var job = JobBuilder.Create<MyJob>().Build();
+            var trigger = TriggerBuilder.Create()
+                .WithIdentity("Up Checker Trigger")
+                .WithSimpleSchedule(s => s.WithIntervalInSeconds(10).RepeatForever())
+                .StartNow()
+                .WithPriority(1)
+                .Build();
+            await scheduler.ScheduleJob(job, trigger);
         }
 
         public void Stop()
         {
-            if (_serviceThread?.IsAlive ?? false) _serviceThread.Abort();
-        }
 
-        private void Run()
+        }
+    }
+
+    public class MyJob : IJob
+    {
+        private readonly IUpChecker _upChecker = new NotifyingUpChecker();
+
+        public async Task Execute(IJobExecutionContext context)
         {
-            var upChecker = new NotifyingUpChecker();
-            while (!upChecker.IsItUp(System.Configuration.ConfigurationManager.AppSettings["UrlToCheck"]))
-            {
-                Thread.Sleep(int.Parse(System.Configuration.ConfigurationManager.AppSettings["IntervalMilliseconds"]));
-            }
-            Stop();
+            await _upChecker.IsItUpAsync(System.Configuration.ConfigurationManager.AppSettings["UrlToCheck"]);
         }
     }
 }
