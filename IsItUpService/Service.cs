@@ -1,5 +1,5 @@
 ﻿using System.Threading;
-using IsItUpLogic;
+using IsItUpCore;
 
 namespace IsItUpService
 {

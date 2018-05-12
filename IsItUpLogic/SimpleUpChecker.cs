@@ -4,7 +4,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Flurl.Http;
 
-namespace IsItUpLogic
+namespace IsItUpCore
 {
     public class SimpleUpChecker : IUpChecker
     {

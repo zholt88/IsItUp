@@ -94,9 +94,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\IsItUpLogic\IsItUpLogic.csproj">
+    <ProjectReference Include="..\IsItUpLogic\IsItUpCore.csproj">
       <Project>{2d4eec3e-cee6-47d0-97f4-7d902e193238}</Project>
-      <Name>IsItUpLogic</Name>
+      <Name>IsItUpCore</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

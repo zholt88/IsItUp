@@ -7,8 +7,8 @@
     <ProjectGuid>{2D4EEC3E-CEE6-47D0-97F4-7D902E193238}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IsItUpLogic</RootNamespace>
-    <AssemblyName>IsItUpLogic</AssemblyName>
+    <RootNamespace>IsItUpCore</RootNamespace>
+    <AssemblyName>IsItUpCore</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

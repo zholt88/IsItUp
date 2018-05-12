@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Flurl.Http;
 
-namespace IsItUpLogic
+namespace IsItUpCore
 {
     public class NotifyingUpChecker : IUpChecker
     {

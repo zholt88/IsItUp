@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsItUpService", "IsItUp\IsItUpService.csproj", "{F95207C0-2E22-40D9-94FA-7DBCC9EAB512}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsItUpService", "IsItUpService\IsItUpService.csproj", "{F95207C0-2E22-40D9-94FA-7DBCC9EAB512}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsItUpLogic", "IsItUpLogic\IsItUpLogic.csproj", "{2D4EEC3E-CEE6-47D0-97F4-7D902E193238}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsItUpCore", "IsItUpLogic\IsItUpCore.csproj", "{2D4EEC3E-CEE6-47D0-97F4-7D902E193238}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsItUpApp", "IsItUpApp\IsItUpApp.csproj", "{56390875-687F-40FC-9CD3-8BB23910A7B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsItUpWeb", "IsItUpWeb\IsItUpWeb.csproj", "{D5121B3B-2C0B-4D2E-8B52-642374E4697F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{56390875-687F-40FC-9CD3-8BB23910A7B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56390875-687F-40FC-9CD3-8BB23910A7B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56390875-687F-40FC-9CD3-8BB23910A7B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5121B3B-2C0B-4D2E-8B52-642374E4697F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5121B3B-2C0B-4D2E-8B52-642374E4697F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5121B3B-2C0B-4D2E-8B52-642374E4697F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5121B3B-2C0B-4D2E-8B52-642374E4697F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
